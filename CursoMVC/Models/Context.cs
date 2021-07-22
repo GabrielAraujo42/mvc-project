@@ -8,5 +8,11 @@ namespace CursoMVC.Models
 {
     public class Context : DbContext
     {
+        public DbSet<Category> Categories { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP_PCH001\SQLEXPRESS;Database=CursoMVC;Trusted_Connection=True;");
+        }
     }
 }
