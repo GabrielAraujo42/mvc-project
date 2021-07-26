@@ -12,7 +12,5 @@ namespace CursoMVC.Models
         [Display(Name = "Description")]
         [Required(ErrorMessage = "The description must be filled.")]
         public string description { get; set; }
-
-        public List<Product> Products { get; set; }
     }
 }

@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CursoMVC.Models;
 
 namespace CursoAPI
 {
@@ -28,6 +29,7 @@ namespace CursoAPI
         {
 
             services.AddControllers();
+            services.AddDbContext<Context>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CursoAPI", Version = "v1" });
